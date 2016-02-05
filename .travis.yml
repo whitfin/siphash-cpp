@@ -1,0 +1,9 @@
+language: cpp
+os:
+  - linux
+  - osx
+compiler:
+  - clang
+  - gcc
+before_script: make siphash_test
+script: ./build/test/siphash_test
