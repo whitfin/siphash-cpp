@@ -9,7 +9,7 @@ void test(uint64_t expected, char key[16], char input[], int c, int d) {
 
 		sipHash.update(input);
 
-		assert(expected == sipHash.finish());
+		assert(expected == sipHash.digest());
 }
 
 int main () {
