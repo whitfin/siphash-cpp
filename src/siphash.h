@@ -13,7 +13,7 @@ public:
 		~SipHash();
 		SipHash* update(char data);
 		SipHash* update(char data[]);
-	  uint64_t finish();
+	  uint64_t digest();
 };
 
 #endif

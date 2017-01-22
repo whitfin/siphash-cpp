@@ -76,7 +76,7 @@ SipHash* SipHash::update(char data[]) {
 		return this;
 }
 
-uint64_t SipHash::finish() {
+uint64_t SipHash::digest() {
 		while (m_idx < 7) {
 				m |= 0 << (m_idx++ * 8);
 		}
