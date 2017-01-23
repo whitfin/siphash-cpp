@@ -24,7 +24,7 @@ $ make install
 From there you can access `siphash` through your terminal, as follows:
 
 ```bash
-$ siphash -k "0123456789ABCDEF" -i "hello" -c 2 -d 4
+$ siphash -k "0123456789ABCDEF" -i "hello" -c 2 -d 4 -b 10
 ```
 
 The applicable options exist of:
@@ -34,10 +34,12 @@ The applicable options exist of:
 - `-f` - a file path to hash
 - `-c` - the rounds of C compression (defaults to c)
 - `-d` - the rounds of D compression (defaults to 4)
+- `-b` - the base print the hash in  (defaults to 10)
 
 Note:
 
 - `-k` must be provided, along with either of `-i` or `-f`.
+- `-b` accepts `8`, `10` or `16`. Any other value will be treated as default.
 - Be careful when using `-f`, as the file input is buffered into memory.
 - Avoid adventurous use cases, this is a tool designed for debugging rather than heavy use.
 
